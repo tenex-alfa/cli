@@ -1,0 +1,61 @@
+# The current stage of you development
+# Usally dev, staging or prod
+stage: dev
+# Name the service you are developing
+service: test-service
+
+# Here you can declare the wanted resource
+resources:
+  #myStorage: cloud-drive
+  #myDatabase: cloud-db
+
+# Here you can declare varibles you may use
+# in the functions
+varibles:
+  #myVarible: hello world
+  #myVarible2: Thanks for using 10x project
+  #x:5
+  #y:6
+
+# Here you declare which file you which to
+# include from to be used in the functions
+include:
+  # myLogModule: log
+  # addModule: add
+
+# Here you can declare yml templates to be
+# used in you code. You can download default
+# templates or create your own
+templates:
+  # myTemplate: helloworld
+
+# After here all the declarations are functions
+# see example. Rember to set the return value to
+# ensure a response is sent to the client. Its also
+# a good pratices to set the input to a template
+# for automatic module testing.
+exampleFunction:
+  ##> This makes the program undertand that
+  ##> this function only take the template
+  ##> myTemplate. This make a safe way of
+  ##> ensuring the user follows your rules.
+  # input: myTemplate
+  #
+  ##> This saves the return value of the
+  ##> add function in the varible called
+  ##> sum. To be used later in the function
+  # sum: add(x,y)
+  #
+  ##> Writing void on the left side.
+  ##> make the return value of the funtion
+  ##> not saved. Like an void in regular
+  ##> programming. This can be used when
+  ##> loggin or updating databases.
+  # void: log(sum)
+  #
+  ##> This send back the value stored in
+  ##> the return varible
+  # return: myVarible
+
+thanksForUsinTX:
+  # return : myVarible2
